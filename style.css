@@ -22,34 +22,27 @@ body {
 }
 
 .card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   max-width: 600px;
-  max-height: 450px;
   border-radius: 10px;
   overflow: hidden;
   background: var(--white);
 }
 
-.image {
-  width: 50%;
-  display: flex;
-}
-
 img {
-  width: -webkit-fill-available;
+  display: block;
+  width: 100%;
 }
 
-.content {
+.contents {
   padding: 30px;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-h4 {
+h1 {
   color: var(--bluishblack);
   text-transform: capitalize;
   font-family: "Fraunces", serif;
@@ -130,18 +123,13 @@ button:hover {
   }
 
   .card {
-    flex-direction: column;
+    display: block;
     margin: 25px 15px;
     max-height: initial;
   }
 
-  .image {
-    width: 100%;
-  }
-
-  img {
-    height: 240px;
-    object-fit: cover;
+  .image img {
+    content: url("./images/image-product-mobile.jpg");
   }
 
   .content {
